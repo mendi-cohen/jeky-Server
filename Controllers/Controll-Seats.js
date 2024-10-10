@@ -6,7 +6,7 @@ class SeatsController {
       const Seats = await SeatsService.getAllSeats();
       res.json({ Seats: Seats });
     } catch (error) {
-      res.status(500).json({ error: 'שגיאה בשליפת ההזמנות' });
+      res.status(500).json({ error: 'שגיאה בשליפת הכיסאות' });
     }
   }
   
