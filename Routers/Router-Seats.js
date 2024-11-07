@@ -1,10 +1,10 @@
 import express from 'express';
-import OrdersController from '../Controllers/Controll-Seats.js';
+import SeatsController from '../Controllers/Controll-Seats.js';
 
 
 const router = express.Router();
 
-router.get('/getAllSeats', OrdersController.getAllSeats);
+router.get('/getAllSeats', SeatsController.getAllSeats);
 
 
 
