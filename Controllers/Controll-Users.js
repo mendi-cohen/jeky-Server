@@ -24,8 +24,7 @@ class UsersController {
       const User = await UsersService.AddUserToDB(userData);
       res.json({ User: User });
     } catch (error) {
-      console.error('שגיאה בשמירת המשתמש:', error);
-      res.status(500).json({ error: 'שגיאה בשמירת המשתמש' });
+      res.status(error.status || 500).json({ message: error.message });
     }
   }
 }
